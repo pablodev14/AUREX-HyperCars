@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./docs/readme-banner.svg" alt="AUREX HyperCars banner" width="100%" />
+<img src="./frontend/public/assets/hero-aurex.png" alt="AUREX HyperCars hero banner" width="100%" />
 
 # 🏎️ AUREX HyperCars
 
