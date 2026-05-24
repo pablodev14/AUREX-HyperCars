@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+  <title id="title">AUREX deployment flow</title>
+  <desc id="desc">Flujo visual del despliegue automatico con Terraform, AWS, Docker y la aplicacion AUREX.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#101516"/>
+      <stop offset="1" stop-color="#070909"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="1" x2="1" y2="0">
+      <stop stop-color="#9d5a2c"/>
+      <stop offset=".48" stop-color="#f1b96d"/>
+      <stop offset="1" stop-color="#fff0b8"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000" flood-opacity=".45"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="360" rx="18" fill="#060808"/>
+  <path d="M0 288 C240 236 468 230 710 250 C940 270 1110 246 1280 202 L1280 360 L0 360Z" fill="#0d1112"/>
+  <g font-family="Segoe UI, Arial, sans-serif" filter="url(#shadow)">
+    <g transform="translate(54 78)">
+      <rect width="210" height="144" rx="12" fill="url(#panel)" stroke="#d6914b" stroke-opacity=".52"/>
+      <text x="105" y="54" text-anchor="middle" fill="#f1b96d" font-size="26" font-weight="900">1</text>
+      <text x="105" y="88" text-anchor="middle" fill="#fffaf0" font-size="22" font-weight="800">Git Clone</text>
+      <text x="105" y="116" text-anchor="middle" fill="#b9b1a4" font-size="15">Repositorio publico</text>
+    </g>
+    <g transform="translate(312 78)">
+      <rect width="210" height="144" rx="12" fill="url(#panel)" stroke="#4fd4c8" stroke-opacity=".52"/>
+      <text x="105" y="54" text-anchor="middle" fill="#4fd4c8" font-size="26" font-weight="900">2</text>
+      <text x="105" y="88" text-anchor="middle" fill="#fffaf0" font-size="22" font-weight="800">Terraform</text>
+      <text x="105" y="116" text-anchor="middle" fill="#b9b1a4" font-size="15">EC2 + Security Group</text>
+    </g>
+    <g transform="translate(570 78)">
+      <rect width="210" height="144" rx="12" fill="url(#panel)" stroke="#d6914b" stroke-opacity=".52"/>
+      <text x="105" y="54" text-anchor="middle" fill="#f1b96d" font-size="26" font-weight="900">3</text>
+      <text x="105" y="88" text-anchor="middle" fill="#fffaf0" font-size="22" font-weight="800">Docker</text>
+      <text x="105" y="116" text-anchor="middle" fill="#b9b1a4" font-size="15">Compose build + up</text>
+    </g>
+    <g transform="translate(828 78)">
+      <rect width="210" height="144" rx="12" fill="url(#panel)" stroke="#4fd4c8" stroke-opacity=".52"/>
+      <text x="105" y="54" text-anchor="middle" fill="#4fd4c8" font-size="26" font-weight="900">4</text>
+      <text x="105" y="88" text-anchor="middle" fill="#fffaf0" font-size="22" font-weight="800">AUREX</text>
+      <text x="105" y="116" text-anchor="middle" fill="#b9b1a4" font-size="15">Frontend + Backend</text>
+    </g>
+    <g transform="translate(1086 78)">
+      <rect width="140" height="144" rx="12" fill="url(#gold)" opacity=".95"/>
+      <text x="70" y="62" text-anchor="middle" fill="#120d08" font-size="24" font-weight="900">LIVE</text>
+      <text x="70" y="96" text-anchor="middle" fill="#120d08" font-size="16" font-weight="800">:8080</text>
+      <text x="70" y="120" text-anchor="middle" fill="#120d08" font-size="16" font-weight="800">:4000</text>
+    </g>
+  </g>
+  <g stroke="#f1b96d" stroke-width="4" stroke-linecap="round" stroke-dasharray="16 18" opacity=".75">
+    <path d="M266 150h42">
+      <animate attributeName="stroke-dashoffset" values="0;-68" dur="1.6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M524 150h42">
+      <animate attributeName="stroke-dashoffset" values="0;-68" dur="1.6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M782 150h42">
+      <animate attributeName="stroke-dashoffset" values="0;-68" dur="1.6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1040 150h42">
+      <animate attributeName="stroke-dashoffset" values="0;-68" dur="1.6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>
