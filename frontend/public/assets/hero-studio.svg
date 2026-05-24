@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 980" role="img" aria-labelledby="title desc">
+  <title id="title">AUREX studio hypercar</title>
+  <desc id="desc">Render original de un hypercar AUREX en estudio nocturno premium.</desc>
+  <defs>
+    <linearGradient id="room" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#030405"/>
+      <stop offset=".48" stop-color="#101516"/>
+      <stop offset="1" stop-color="#27150f"/>
+    </linearGradient>
+    <linearGradient id="paint" x1="198" y1="470" x2="1605" y2="470" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0c0f10"/>
+      <stop offset=".2" stop-color="#502116"/>
+      <stop offset=".44" stop-color="#e2893d"/>
+      <stop offset=".59" stop-color="#f7c278"/>
+      <stop offset=".75" stop-color="#8d2f22"/>
+      <stop offset="1" stop-color="#090b0c"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="612" y1="252" x2="1052" y2="458">
+      <stop offset="0" stop-color="#efffff"/>
+      <stop offset=".35" stop-color="#71d5df"/>
+      <stop offset=".75" stop-color="#17272b"/>
+      <stop offset="1" stop-color="#071012"/>
+    </linearGradient>
+    <radialGradient id="wheel" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f5e9d2"/>
+      <stop offset=".12" stop-color="#3c4547"/>
+      <stop offset=".42" stop-color="#0d1112"/>
+      <stop offset=".72" stop-color="#030404"/>
+      <stop offset="1" stop-color="#000"/>
+    </radialGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="38" stdDeviation="34" flood-color="#000" flood-opacity=".72"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1800" height="980" fill="url(#room)"/>
+  <path d="M0 760 C324 690 612 668 902 690 C1240 716 1510 692 1800 630 L1800 980 L0 980Z" fill="#070909"/>
+  <path d="M162 743 C506 684 884 678 1304 724" stroke="#f5bf73" stroke-opacity=".22" stroke-width="5" stroke-linecap="round"/>
+  <path d="M240 796 C600 742 1054 744 1548 806" stroke="#4fd4c8" stroke-opacity=".24" stroke-width="8" stroke-linecap="round"/>
+  <g opacity=".55">
+    <path d="M1160 0v980M1340 0v980M1520 0v980" stroke="#ffffff" stroke-opacity=".06"/>
+    <path d="M0 180h1800M0 340h1800M0 500h1800" stroke="#ffffff" stroke-opacity=".045"/>
+  </g>
+  <ellipse cx="944" cy="751" rx="676" ry="92" fill="#000" opacity=".55"/>
+  <g filter="url(#softShadow)">
+    <path d="M180 656c89-112 226-174 410-194 87-121 214-182 382-182 180 0 326 68 437 204 87 14 156 43 208 86 38 31 30 88-15 107-112 48-301 72-568 72H468c-156 0-252-26-289-78-5-8-5-13 1-15Z" fill="url(#paint)"/>
+    <path d="M596 459c79-102 188-152 328-151 140 1 254 53 344 156-110 7-225 10-346 9-113-1-222-6-326-14Z" fill="url(#glass)"/>
+    <path d="M662 430c72-63 154-95 247-94l-42 130c-83-1-151-13-205-36Z" fill="#f7ffff" opacity=".18"/>
+    <path d="M936 337c119 7 214 50 286 129-87 5-177 7-269 5Z" fill="#0b171a" opacity=".72"/>
+    <path d="M220 650c147 30 333 46 558 46h454c162 0 287-19 377-56-55 75-242 112-561 112H462c-132 0-213-34-242-102Z" fill="#070909"/>
+    <path d="M1188 514c152 15 277 49 374 102-94 17-226 14-396-10-87-12-169-29-247-49Z" fill="#fff3c6" opacity=".82" filter="url(#glow)"/>
+    <path d="M221 631c99-79 221-123 368-132l-78 128c-128 20-224 21-290 4Z" fill="#4fd4c8" opacity=".78" filter="url(#glow)"/>
+    <path d="M720 534h514c88 0 171 13 250 40-237 22-514 27-830 16-103-4-206-14-309-31 106-17 231-25 375-25Z" fill="#fff5cf" opacity=".13"/>
+    <path d="M778 555h402" stroke="#fff3c4" stroke-width="8" stroke-linecap="round" opacity=".5"/>
+  </g>
+  <g>
+    <circle cx="512" cy="725" r="125" fill="url(#wheel)"/>
+    <circle cx="512" cy="725" r="76" fill="#101617" stroke="#d6914b" stroke-width="12"/>
+    <circle cx="512" cy="725" r="22" fill="#fff7d8"/>
+    <path d="M512 651v148M438 725h148M460 673l104 104M564 673 460 777" stroke="#849295" stroke-width="9" stroke-linecap="round" opacity=".76"/>
+    <circle cx="1248" cy="725" r="125" fill="url(#wheel)"/>
+    <circle cx="1248" cy="725" r="76" fill="#101617" stroke="#d6914b" stroke-width="12"/>
+    <circle cx="1248" cy="725" r="22" fill="#fff7d8"/>
+    <path d="M1248 651v148M1174 725h148M1196 673l104 104M1300 673l-104 104" stroke="#849295" stroke-width="9" stroke-linecap="round" opacity=".76"/>
+  </g>
+  <path d="M592 786 C760 826 1080 826 1260 788" stroke="#ffffff" stroke-opacity=".16" stroke-width="10" stroke-linecap="round"/>
+</svg>

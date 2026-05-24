@@ -6,12 +6,18 @@ import {
   Banknote,
   Car,
   CheckCircle2,
+  Crown,
   Gauge,
   MapPin,
   Menu,
+  Palette,
   Phone,
+  Route,
+  ScanLine,
   ShieldCheck,
   Sparkles,
+  Timer,
+  Wrench,
   X,
   Zap
 } from "lucide-react";
@@ -31,6 +37,18 @@ const fetchJson = async (path) => {
 
 const formatNumber = (value) =>
   new Intl.NumberFormat("es-CO", { maximumFractionDigits: 0 }).format(value);
+
+const colorSwatches = {
+  "Cobre Aurora": "#d6914b",
+  "Negro Volcan": "#111516",
+  "Plata Titanio": "#c8d0d3",
+  "Rojo Cinetico": "#d93932",
+  "Azul Ion": "#45c8e8",
+  "Blanco Ceramico": "#f5efe2",
+  "Amarillo Solar": "#f4c533",
+  "Grafito Mate": "#555b5c",
+  "Verde Esmeralda": "#1d8b65"
+};
 
 function useAurexData() {
   const [data, setData] = useState({
@@ -74,6 +92,7 @@ function Header() {
   const [open, setOpen] = useState(false);
   const links = [
     ["Modelos", "#modelos"],
+    ["Configurador", "#configurador"],
     ["Compra", "#compra"],
     ["Acreditacion", "#acreditacion"],
     ["Concesionarios", "#concesionarios"]
@@ -116,7 +135,7 @@ function Hero({ brand, primaryModel }) {
   return (
     <section id="inicio" className="hero-section">
       <div className="hero-bg" aria-hidden="true" />
-      <img className="hero-car" src="/assets/hero-aurex.svg" alt="" aria-hidden="true" />
+      <img className="hero-car" src="/assets/hero-studio.svg" alt="" aria-hidden="true" />
       <div className="hero-content">
         <p className="eyebrow">
           <Sparkles size={18} />
@@ -152,6 +171,10 @@ function Hero({ brand, primaryModel }) {
           <span>{primaryModel?.topSpeed || "356 km/h"}</span>
           <small>Velocidad tope</small>
         </div>
+        <div>
+          <span>{primaryModel?.units || 48}</span>
+          <small>Unidades globales</small>
+        </div>
       </div>
     </section>
   );
@@ -186,14 +209,194 @@ function ModelCard({ model, selected, onSelect }) {
             <ArrowRight size={17} />
             {model.topSpeed}
           </span>
+          <span>
+            <Crown size={17} />
+            {model.units} unidades
+          </span>
         </div>
         <div className="color-row">
           {model.colors.map((color) => (
-            <span key={color}>{color}</span>
+            <span key={color}>
+              <i style={{ background: colorSwatches[color] }} />
+              {color}
+            </span>
           ))}
         </div>
       </div>
     </article>
+  );
+}
+
+function ConfiguratorSection({ models, financing }) {
+  const [modelId, setModelId] = useState(models[1]?.id || models[0]?.id);
+  const selectedModel = models.find((model) => model.id === modelId) || models[0];
+  const [selectedColor, setSelectedColor] = useState(selectedModel?.colors[0]);
+  const [planId, setPlanId] = useState(financing[0]?.id);
+  const selectedPlan = financing.find((plan) => plan.id === planId) || financing[0];
+
+  useEffect(() => {
+    if (selectedModel && !selectedModel.colors.includes(selectedColor)) {
+      setSelectedColor(selectedModel.colors[0]);
+    }
+  }, [selectedModel, selectedColor]);
+
+  const downPaymentPercent = Number.parseFloat(selectedPlan?.downPayment || "30") / 100;
+  const financedValue = selectedModel?.priceCop * (1 - downPaymentPercent);
+  const monthlyEstimate = financedValue / (selectedPlan?.termMonths || 36);
+
+  return (
+    <section id="configurador" className="configurator-section">
+      <div className="shell configurator-layout">
+        <div className="config-copy">
+          <p className="eyebrow">
+            <ScanLine size={18} />
+            Atelier digital
+          </p>
+          <h2>Configura una pieza de coleccion antes de pisar el showroom.</h2>
+          <p>
+            Seleccion limitada, color exterior, credito y reserva inicial en una experiencia directa
+            para clientes que quieren decidir rapido y con informacion clara.
+          </p>
+          <div className="atelier-metrics">
+            <span>
+              <Timer size={18} />
+              72 h para separar cupo
+            </span>
+            <span>
+              <Wrench size={18} />
+              Mantenimiento incluido
+            </span>
+            <span>
+              <Route size={18} />
+              Entrega nacional
+            </span>
+          </div>
+        </div>
+
+        <div className="configurator-panel">
+          <div className="config-preview" style={{ "--paint": colorSwatches[selectedColor] }}>
+            <img src={selectedModel?.image} alt={`Configuracion ${selectedModel?.name}`} />
+            <div className="config-badge">
+              <span>{selectedModel?.name}</span>
+              <strong>{selectedModel?.drivetrain}</strong>
+            </div>
+          </div>
+
+          <div className="config-controls">
+            <div className="segmented" aria-label="Modelos AUREX">
+              {models.map((model) => (
+                <button
+                  key={model.id}
+                  type="button"
+                  className={model.id === selectedModel?.id ? "is-active" : ""}
+                  onClick={() => setModelId(model.id)}
+                >
+                  {model.name}
+                </button>
+              ))}
+            </div>
+
+            <div className="paint-row" aria-label="Colores disponibles">
+              <Palette size={18} />
+              {selectedModel?.colors.map((color) => (
+                <button
+                  key={color}
+                  type="button"
+                  className={color === selectedColor ? "is-active" : ""}
+                  onClick={() => setSelectedColor(color)}
+                  title={color}
+                  aria-label={color}
+                  style={{ background: colorSwatches[color] }}
+                />
+              ))}
+              <span>{selectedColor}</span>
+            </div>
+
+            <div className="finance-selector">
+              {financing.map((plan) => (
+                <button
+                  key={plan.id}
+                  type="button"
+                  className={plan.id === selectedPlan?.id ? "is-active" : ""}
+                  onClick={() => setPlanId(plan.id)}
+                >
+                  <span>{plan.name}</span>
+                  <small>{plan.downPayment} inicial</small>
+                </button>
+              ))}
+            </div>
+
+            <div className="quote-card">
+              <div>
+                <small>Precio configurado</small>
+                <strong>{selectedModel?.priceFormatted}</strong>
+              </div>
+              <div>
+                <small>Reserva</small>
+                <strong>{selectedModel?.reservationFormatted}</strong>
+              </div>
+              <div>
+                <small>Cuota base estimada</small>
+                <strong>
+                  {new Intl.NumberFormat("es-CO", {
+                    style: "currency",
+                    currency: "COP",
+                    maximumFractionDigits: 0
+                  }).format(monthlyEstimate)}
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ExperienceSection({ brand }) {
+  const moments = [
+    {
+      icon: <Crown size={22} />,
+      title: "Entrega privada",
+      copy: "Ceremonia boutique, placa de unidad, set de viaje y configuracion final con especialista."
+    },
+    {
+      icon: <Gauge size={22} />,
+      title: "Telemetria AUREX",
+      copy: "Registro de vueltas, temperatura, frenada y modos de manejo para eventos de pista."
+    },
+    {
+      icon: <ShieldCheck size={22} />,
+      title: "Propiedad protegida",
+      copy: brand?.concierge ||
+        "Acompanamiento tecnico nacional, revision programada y soporte de repuestos certificados."
+    }
+  ];
+
+  return (
+    <section className="experience-section">
+      <div className="shell experience-layout">
+        <div className="experience-visual">
+          <img src="/assets/interior-cockpit.svg" alt="Interior AUREX con cockpit deportivo" />
+        </div>
+        <div className="experience-content">
+          <p className="eyebrow">
+            <Sparkles size={18} />
+            Propiedad AUREX
+          </p>
+          <h2>La compra se siente como entrar a un club privado.</h2>
+          <div className="experience-list">
+            {moments.map((moment) => (
+              <article key={moment.title}>
+                <div>{moment.icon}</div>
+                <h3>{moment.title}</h3>
+                <p>{moment.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -513,7 +716,9 @@ function App() {
       <main>
         <Hero brand={brand} primaryModel={models[1] || models[0]} />
         <ModelsSection models={models} />
+        <ConfiguratorSection models={models} financing={financing} />
         <PurchaseSection models={models} financing={financing} />
+        <ExperienceSection brand={brand} />
         <AccreditationSection brand={brand} accreditations={accreditations} />
         <DealersSection dealers={dealers} />
       </main>

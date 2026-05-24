@@ -22,7 +22,9 @@ export const models = [
     acceleration: "2.7 s",
     topSpeed: "342 km/h",
     range: "620 km",
-    image: "/assets/car-noctis.svg",
+    image: "/assets/studio-noctis.svg",
+    units: 72,
+    drivetrain: "V12 biturbo hibrido",
     colors: ["Cobre Aurora", "Negro Volcan", "Plata Titanio"],
     description:
       "Motor V12 biturbo con asistencia electrica, cabina de cuero nappa y chasis monocasco en fibra de carbono.",
@@ -38,7 +40,9 @@ export const models = [
     acceleration: "2.3 s",
     topSpeed: "356 km/h",
     range: "740 km",
-    image: "/assets/car-tempest.svg",
+    image: "/assets/studio-tempest.svg",
+    units: 48,
+    drivetrain: "E-Hybrid AWD",
     colors: ["Rojo Cinetico", "Azul Ion", "Blanco Ceramico"],
     description:
       "Sistema hibrido enchufable con vectorizacion de torque y paquete aero para maximo agarre en curvas rapidas.",
@@ -54,7 +58,9 @@ export const models = [
     acceleration: "3.0 s",
     topSpeed: "318 km/h",
     range: "580 km",
-    image: "/assets/car-rayo.svg",
+    image: "/assets/studio-rayo.svg",
+    units: 96,
+    drivetrain: "V8 biturbo RWD",
     colors: ["Amarillo Solar", "Grafito Mate", "Verde Esmeralda"],
     description:
       "La opcion mas pura de AUREX: ligera, directa y creada para conductores que quieren sentir cada apice.",

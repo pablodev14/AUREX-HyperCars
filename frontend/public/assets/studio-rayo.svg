@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" role="img" aria-labelledby="title">
+  <title id="title">AUREX Rayo GT4 realistic studio render</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050606"/><stop offset=".58" stop-color="#151916"/><stop offset="1" stop-color="#23220e"/></linearGradient>
+    <linearGradient id="paint" x1="118" y1="400" x2="1165" y2="400"><stop stop-color="#080a0a"/><stop offset=".2" stop-color="#75650f"/><stop offset=".48" stop-color="#f3c331"/><stop offset=".68" stop-color="#d8ff70"/><stop offset=".86" stop-color="#5f6214"/><stop offset="1" stop-color="#080a0a"/></linearGradient>
+    <linearGradient id="glass" x1="430" y1="224" x2="824" y2="365"><stop stop-color="#f2ffff"/><stop offset=".42" stop-color="#8be2de"/><stop offset="1" stop-color="#122022"/></linearGradient>
+    <radialGradient id="wheel" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fbffd6"/><stop offset=".17" stop-color="#3f4627"/><stop offset=".52" stop-color="#070909"/><stop offset="1" stop-color="#000"/></radialGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="28" stdDeviation="26" flood-color="#000" flood-opacity=".62"/></filter>
+  </defs>
+  <rect width="1280" height="760" fill="url(#bg)"/>
+  <path d="M0 586 C272 520 546 510 820 540 C1016 562 1164 535 1280 495 L1280 760 L0 760Z" fill="#070909"/>
+  <ellipse cx="646" cy="600" rx="470" ry="68" fill="#000" opacity=".54"/>
+  <g filter="url(#shadow)">
+    <path d="M114 526c70-94 176-146 318-158 69-80 167-120 293-121 138-1 242 46 313 142 76 5 143 21 199 48-45 16-101 28-168 34 77 15 132 37 165 64-84 36-221 54-412 54H353c-113 0-193-20-240-60-5-4-4-5 1-3Z" fill="url(#paint)"/>
+    <path d="M452 365c59-66 140-99 241-99 100 0 181 35 243 104-91 6-178 9-262 7-77-2-151-6-222-12Z" fill="url(#glass)"/>
+    <path d="M170 514c111 27 243 41 396 41h338c128 0 231-14 309-43-43 50-181 75-414 75H349c-101 0-161-24-179-73Z" fill="#050708"/>
+    <path d="M207 489c96-57 194-87 295-89l-72 92c-104 20-178 19-223-3Z" fill="#111414" opacity=".46"/>
+    <path d="M922 408c117 10 211 30 282 61-61 17-154 18-280 4Z" fill="#fff6c6" opacity=".86"/>
+    <path d="M548 427h335" stroke="#fff6d4" stroke-width="7" stroke-linecap="round" opacity=".48"/>
+  </g>
+  <circle cx="390" cy="580" r="92" fill="url(#wheel)"/>
+  <circle cx="390" cy="580" r="56" fill="#111719" stroke="#c9ff6a" stroke-width="10"/>
+  <circle cx="390" cy="580" r="15" fill="#fff6d4"/>
+  <circle cx="905" cy="580" r="92" fill="url(#wheel)"/>
+  <circle cx="905" cy="580" r="56" fill="#111719" stroke="#c9ff6a" stroke-width="10"/>
+  <circle cx="905" cy="580" r="15" fill="#fff6d4"/>
+</svg>
