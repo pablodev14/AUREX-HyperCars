@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 760" role="img" aria-labelledby="title desc">
+  <title id="title">AUREX hypercar hero</title>
+  <desc id="desc">Deportivo AUREX de perfil bajo en una escena de estudio nocturna.</desc>
+  <defs>
+    <linearGradient id="body" x1="192" y1="327" x2="1293" y2="327" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#151819"/>
+      <stop offset=".22" stop-color="#b65b2e"/>
+      <stop offset=".5" stop-color="#f2a24d"/>
+      <stop offset=".76" stop-color="#51251c"/>
+      <stop offset="1" stop-color="#101314"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="468" y1="183" x2="846" y2="352" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#dffcff"/>
+      <stop offset=".45" stop-color="#60c7d2"/>
+      <stop offset="1" stop-color="#132024"/>
+    </linearGradient>
+    <radialGradient id="wheel" cx="0" cy="0" r="1" gradientTransform="translate(421 507) rotate(90) scale(120)">
+      <stop offset="0" stop-color="#f5e7c8"/>
+      <stop offset=".18" stop-color="#2a2f31"/>
+      <stop offset=".58" stop-color="#070909"/>
+      <stop offset="1" stop-color="#000"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="36" stdDeviation="24" flood-color="#000" flood-opacity=".58"/>
+    </filter>
+  </defs>
+  <rect width="1480" height="760" fill="none"/>
+  <ellipse cx="740" cy="592" rx="610" ry="86" fill="#000" opacity=".42"/>
+  <g filter="url(#shadow)">
+    <path d="M135 486c67-89 175-132 324-151 71-92 170-140 298-146 145-7 261 42 355 146 95 13 171 47 228 101 21 20 18 56-7 71-91 55-253 82-486 82H365c-113 0-191-23-233-70-9-10-8-22 3-33Z" fill="url(#body)"/>
+    <path d="M458 331c61-75 151-111 270-110 101 1 190 37 266 108-92 3-181 5-267 5-86 0-176-1-269-3Z" fill="url(#glass)" opacity=".92"/>
+    <path d="M506 312c55-49 119-73 193-73l-31 87c-45 1-100-4-162-14Z" fill="#e9ffff" opacity=".22"/>
+    <path d="M704 239c98 4 179 34 244 91-79 3-156 4-232 2l-12-93Z" fill="#153238" opacity=".92"/>
+    <path d="M142 490c104 23 220 35 348 35h584c107 0 193-15 258-44-32 59-190 88-475 88H348c-102 0-171-18-206-79Z" fill="#0b0d0e"/>
+    <path d="M1010 361c128 13 232 46 312 99-37 7-100 8-188 3-88-5-162-13-222-25Z" fill="#ffdf91" opacity=".86"/>
+    <path d="M159 480c82-68 179-107 289-116l-58 105c-95 10-172 13-231 11Z" fill="#4fd4c8" opacity=".72"/>
+    <path d="M546 382h405c55 0 115 11 180 34-170 14-357 18-562 13-73-2-144-8-212-18 46-19 109-29 189-29Z" fill="#ffe0a0" opacity=".18"/>
+    <path d="M650 394h282" stroke="#fff2c4" stroke-width="7" stroke-linecap="round" opacity=".55"/>
+  </g>
+  <g>
+    <circle cx="422" cy="526" r="103" fill="url(#wheel)"/>
+    <circle cx="422" cy="526" r="61" fill="#121719" stroke="#d6914b" stroke-width="10"/>
+    <circle cx="422" cy="526" r="17" fill="#f7f1e5"/>
+    <path d="M422 469v114M365 526h114M382 486l80 80M462 486l-80 80" stroke="#778588" stroke-width="8" stroke-linecap="round" opacity=".74"/>
+    <circle cx="1063" cy="526" r="103" fill="url(#wheel)"/>
+    <circle cx="1063" cy="526" r="61" fill="#121719" stroke="#d6914b" stroke-width="10"/>
+    <circle cx="1063" cy="526" r="17" fill="#f7f1e5"/>
+    <path d="M1063 469v114M1006 526h114M1023 486l80 80M1103 486l-80 80" stroke="#778588" stroke-width="8" stroke-linecap="round" opacity=".74"/>
+  </g>
+  <path d="M198 613h1084" stroke="#4fd4c8" stroke-width="8" stroke-linecap="round" opacity=".62"/>
+  <path d="M325 650h830" stroke="#d6914b" stroke-width="4" stroke-linecap="round" opacity=".42"/>
+</svg>

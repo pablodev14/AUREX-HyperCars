@@ -1,0 +1,20 @@
+node_modules/
+dist/
+.env
+.env.*
+npm-debug.log*
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+infra/terraform/aurex-app.zip
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
