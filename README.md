@@ -38,14 +38,21 @@
 ## 🎨 Preview Visual
 
 <div align="center">
-  <img src="./frontend/public/assets/hero-studio.svg" alt="Hero AUREX" width="100%" />
+  <img src="./frontend/public/assets/hero-aurex.png" alt="Hero AUREX" width="100%" />
 </div>
 
 <table>
   <tr>
-    <td align="center"><img src="./frontend/public/assets/studio-noctis.svg" alt="Noctis V12" width="100%"><br><b>Noctis V12</b></td>
-    <td align="center"><img src="./frontend/public/assets/studio-tempest.svg" alt="Tempest E-Hybrid" width="100%"><br><b>Tempest E-Hybrid</b></td>
-    <td align="center"><img src="./frontend/public/assets/studio-rayo.svg" alt="Rayo GT4" width="100%"><br><b>Rayo GT4</b></td>
+    <td align="center"><img src="./frontend/public/assets/noctis-v12.png" alt="Noctis V12" width="100%"><br><b>Noctis V12</b></td>
+    <td align="center"><img src="./frontend/public/assets/tempest-hybrid.png" alt="Tempest E-Hybrid" width="100%"><br><b>Tempest E-Hybrid</b></td>
+    <td align="center"><img src="./frontend/public/assets/rayo-gt4.png" alt="Rayo GT4" width="100%"><br><b>Rayo GT4</b></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td align="center"><img src="./frontend/public/assets/interior-cockpit.png" alt="Interior AUREX" width="100%"><br><b>Cockpit premium</b></td>
+    <td align="center"><img src="./frontend/public/assets/showroom-aurex.png" alt="Showroom AUREX" width="100%"><br><b>AUREX House</b></td>
   </tr>
 </table>
 

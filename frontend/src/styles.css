@@ -173,7 +173,7 @@ button {
   background:
     linear-gradient(90deg, rgba(7, 9, 9, 0.98) 0%, rgba(7, 9, 9, 0.74) 36%, rgba(7, 9, 9, 0.24) 100%),
     linear-gradient(180deg, rgba(7, 9, 9, 0.02), rgba(7, 9, 9, 0.95)),
-    url("/assets/hero-studio.svg") right center / min(1280px, 105vw) auto no-repeat,
+    url("/assets/hero-aurex.png") right center / min(1480px, 112vw) auto no-repeat,
     #090d0e;
 }
 
@@ -374,9 +374,12 @@ button {
 .model-stage img {
   position: relative;
   z-index: 2;
-  width: 116%;
+  width: 118%;
   max-width: none;
-  margin: 78px 0 0 -7%;
+  height: 440px;
+  margin: 72px 0 0 -9%;
+  object-fit: cover;
+  border-radius: 8px;
   filter: drop-shadow(0 34px 34px rgba(0, 0, 0, 0.38));
 }
 
@@ -433,13 +436,15 @@ button {
 }
 
 .model-cover img {
-  width: 112%;
-  transform: translateX(-6%);
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  transform: scale(1.02);
   transition: transform 220ms ease;
 }
 
 .model-cover:hover img {
-  transform: translateX(0) scale(1.02);
+  transform: scale(1.06);
 }
 
 .model-cover span {
@@ -619,9 +624,11 @@ button {
 
 .config-preview img {
   position: absolute;
-  right: -9%;
-  bottom: -2%;
-  width: 116%;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   filter: drop-shadow(0 36px 38px rgba(0, 0, 0, 0.48));
 }
 
@@ -787,6 +794,60 @@ button {
   height: 100%;
   min-height: 560px;
   object-fit: cover;
+}
+
+.showroom-section {
+  position: relative;
+  min-height: 720px;
+  overflow: hidden;
+  background: #070909;
+}
+
+.showroom-media {
+  position: absolute;
+  inset: 0;
+}
+
+.showroom-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.showroom-section::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(7, 9, 9, 0.92), rgba(7, 9, 9, 0.32) 48%, rgba(7, 9, 9, 0.82)),
+    linear-gradient(180deg, rgba(7, 9, 9, 0.1), rgba(7, 9, 9, 0.88));
+}
+
+.showroom-overlay {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  min-height: 720px;
+  align-items: end;
+  padding-bottom: 86px;
+}
+
+.showroom-copy {
+  width: min(650px, 100%);
+}
+
+.showroom-copy h2 {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(2.4rem, 6vw, 5.2rem);
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+.showroom-copy p:not(.eyebrow) {
+  color: #e6dece;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 .experience-list {
@@ -1214,7 +1275,7 @@ button {
   .hero-bg {
     background:
       linear-gradient(180deg, rgba(7, 9, 9, 0.55), rgba(7, 9, 9, 0.96)),
-      url("/assets/hero-studio.svg") 58% 48% / 980px auto no-repeat,
+      url("/assets/hero-aurex.png") 58% 48% / 1180px auto no-repeat,
       #090d0e;
   }
 
@@ -1246,6 +1307,7 @@ button {
 
   .model-stage img {
     width: 130%;
+    height: 250px;
     margin-top: 80px;
     margin-left: -15%;
   }
@@ -1264,13 +1326,18 @@ button {
   }
 
   .config-preview img {
-    right: -28%;
-    width: 150%;
+    right: 0;
+    width: 100%;
   }
 
   .experience-visual,
   .experience-visual img {
     min-height: 360px;
+  }
+
+  .showroom-section,
+  .showroom-overlay {
+    min-height: 560px;
   }
 
   .accreditation-grid {

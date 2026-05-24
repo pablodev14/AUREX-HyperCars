@@ -135,7 +135,7 @@ function Hero({ brand, primaryModel }) {
   return (
     <section id="inicio" className="hero-section">
       <div className="hero-bg" aria-hidden="true" />
-      <img className="hero-car" src="/assets/hero-studio.svg" alt="" aria-hidden="true" />
+      <img className="hero-car" src="/assets/hero-aurex.png" alt="" aria-hidden="true" />
       <div className="hero-content">
         <p className="eyebrow">
           <Sparkles size={18} />
@@ -377,7 +377,7 @@ function ExperienceSection({ brand }) {
     <section className="experience-section">
       <div className="shell experience-layout">
         <div className="experience-visual">
-          <img src="/assets/interior-cockpit.svg" alt="Interior AUREX con cockpit deportivo" />
+          <img src="/assets/interior-cockpit.png" alt="Interior AUREX con cockpit deportivo" />
         </div>
         <div className="experience-content">
           <p className="eyebrow">
@@ -394,6 +394,29 @@ function ExperienceSection({ brand }) {
               </article>
             ))}
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ShowroomSection() {
+  return (
+    <section className="showroom-section">
+      <div className="showroom-media">
+        <img src="/assets/showroom-aurex.png" alt="Showroom premium AUREX" />
+      </div>
+      <div className="shell showroom-overlay">
+        <div className="showroom-copy">
+          <p className="eyebrow">
+            <Crown size={18} />
+            AUREX House
+          </p>
+          <h2>Un showroom creado para decidir, configurar y recibir tu unidad.</h2>
+          <p>
+            Espacios privados, asesores de configuracion, entrega ceremonial y acompanamiento de
+            credito para compradores en Colombia.
+          </p>
         </div>
       </div>
     </section>
@@ -719,6 +742,7 @@ function App() {
         <ConfiguratorSection models={models} financing={financing} />
         <PurchaseSection models={models} financing={financing} />
         <ExperienceSection brand={brand} />
+        <ShowroomSection />
         <AccreditationSection brand={brand} accreditations={accreditations} />
         <DealersSection dealers={dealers} />
       </main>
